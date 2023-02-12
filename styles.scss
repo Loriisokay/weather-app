@@ -10,9 +10,18 @@ $accent-color: #fb8500;
     padding: 0;
 }
 
+@keyframes animatedBackground {
+    from {
+      background-position: 0 10;
+    }
+    to {
+      background-position: 100% 5%;
+    }
+}
+
 body {
     font-family: 'Montserrat', monospace;
-    background-image: url('/img/cloudyD.jpg');
+    background-image: url('../img/cloudyD.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
@@ -20,6 +29,8 @@ body {
     grid-row: 1fr 1fr;
     height: 100vh;
     color: #FFF;
+    animation: animatedBackground 10s linear infinite alternate;
+    -webkit-animation: animatedBackground 10s linear infinite alternate;
 }
 
 header {
