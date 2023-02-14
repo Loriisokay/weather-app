@@ -15,7 +15,7 @@
 }
 body {
   font-family: "Montserrat", monospace;
-  background-image: url("../img/cloudyD.jpg");
+  background-image: url("../img/backgrounds/day/cloudy.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;

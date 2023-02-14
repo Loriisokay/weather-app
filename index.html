@@ -16,13 +16,15 @@
     </header>
     <section class="hero">
         <h1 id="temperature">0°</h1>
+
         <div class="wrapper">
-            <h2 id="city">Almaty</h2>
-            <span id="time">00:00 - </span>
-            <span id="date">Wednesday, 8 Feb '23</span>
+            <h3 id="feels-like"></h3>
+            <h2 id="city"></h2>
+            <span id="time"></span>
+            <span id="date"></span>
         </div>
         <div class="wrapper">
-            <i class="fa-solid fa-cloud fa-2x condition-icon"></i>
+            <i class="fa-solid fa-cloud fa-2x condition-icon" id="condition-icon"></i>
             <h3 id="conditions">Cloudy</h3>
         </div>
 
@@ -36,10 +38,10 @@
                 </button>
             </form>
             <ul class="pinned-cities">
-                <li class="pin_city" id="almaty">Almaty</li>
-                <li class="pin_city" id="astana">Astana</li>
-                <li class="pin_city" id="london">London</li>
-                <li class="pin_city" id="paris">Paris</li>
+                <li class="pin_city" id="almaty" data-city="Almaty">Almaty</li>
+                <li class="pin_city" id="astana" data-city="Astana">Astana</li>
+                <li class="pin_city" id="london" data-city="London">London</li>
+                <li class="pin_city" id="paris" data-city="Paris">Paris</li>
             </ul>
             <hr>
         </div>
@@ -47,19 +49,21 @@
             <h3 class="bold">Weather Details</h3>
             <div class="wrapper_details">
                 <h4 class="detail">Wind</h4>
-                <span id="wind" class="bold">0%</span>
+                <span id="wind" class="bold"></span>
             </div>
             <div class="wrapper_details">
-                <h4 class="detail">Pressure</h4>
-                <span id="pressure" class="bold">0mbar</span>
+                <h4 class="detail">UV</h4>
+                <span id="uv" class="bold"></span>
             </div>
             <div class="wrapper_details">
                 <h4 class="detail">Humidity</h4>
-                <span id="humidity" class="bold">0%</span>
+                <span id="humidity" class="bold"></span>
             </div>
         </div>
     </section>
     <script src="https://kit.fontawesome.com/09c907c3bc.js" crossorigin="anonymous"></script>
+    <script src="/lib/moment.min.js"></script>
+    <script src="/lib/conditions.js"></script>
     <script src="script.js"></script>
 </body>
 
