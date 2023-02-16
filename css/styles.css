@@ -15,7 +15,7 @@
 }
 body {
   font-family: "Montserrat", monospace;
-  background-image: url("../img/backgrounds/day/cloudy.jpg");
+  background-color: #000;
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
@@ -49,8 +49,10 @@ header {
   padding-left: 7%;
 }
 
-.condition-icon {
+img {
   display: block;
+  width: 52px;
+  height: 52px;
 }
 
 .location, .details {
