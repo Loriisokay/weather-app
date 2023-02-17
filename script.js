@@ -1,4 +1,4 @@
-import {parsed} from './conditions.js';
+import {parsed} from '/conditions.js';
 
 const temperature = document.getElementById('temperature');
 const feelsLike = document.getElementById('feels-like')
