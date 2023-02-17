@@ -1,5 +1,5 @@
-import {allConditions, parsed} from '../lib/conditions.js';
-console.log(allConditions, parsed)
+import {parsed} from './conditions.js';
+
 const temperature = document.getElementById('temperature');
 const feelsLike = document.getElementById('feels-like')
 let city = document.getElementById('city');
@@ -13,7 +13,6 @@ const uvLevel = document.getElementById('uv');
 const weatherAPIdomain = 'api.weatherapi.com';
 const submit = document.querySelector('#submit-location');
 const APIkey = '87bc90756d4c427eb5f93920231202';
-const dataFromAPI = {};
 let loc = "Almaty";
 
 
@@ -51,7 +50,6 @@ async function getWeatherData(domain, key, place) { // get API data
         })
         const respObj = await response.json();
         changeData(respObj);
-
     } catch (error) {
         console.log(error);
     }
@@ -118,7 +116,7 @@ function changeData(object) {
     parsed.forEach((element) => {
         if (element.code == conditionCode) {
             icon = element.icon;
-            conditionIcon.src = `/img/icons/${dayTime}/${icon}.png`;
+            conditionIcon.src = `./img/icons/${dayTime}/${icon}.png`;
         }
     })
 
@@ -190,7 +188,7 @@ function changeData(object) {
             background = 'snowing';
     }
 
-    document.body.style.backgroundImage = `url(/img/backgrounds/${dayTime}/${background}.jpg)`
+    document.body.style.backgroundImage = `url(./img/backgrounds/${dayTime}/${background}.jpg)`
 }
 
 
