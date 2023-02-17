@@ -1,4 +1,5 @@
-
+import {allConditions, parsed} from '../lib/conditions.js';
+console.log(allConditions, parsed)
 const temperature = document.getElementById('temperature');
 const feelsLike = document.getElementById('feels-like')
 let city = document.getElementById('city');
@@ -78,10 +79,10 @@ function changeData(object) {
 
     //set temperature
     temperature.innerText = Math.round(temp_c) + '°';
-    feelsLike.innerText = 'feels like ' + Math.round(feelslike_c) + '°';
+    feelsLike.innerText = `feels like ${Math.round(feelslike_c)}°`;
 
     //set date&time
-    dateAndTime = localtime.split(' ');
+    const dateAndTime = localtime.split(' ');
     time.innerText = dateAndTime[1];
     const currentDate = new Date(dateAndTime);
     const weekDayOptions = { weekday: 'long' };
@@ -90,7 +91,7 @@ function changeData(object) {
     const day = currentDate.getDate();
     const month = new Intl.DateTimeFormat("en-US", monthOptions).format(currentDate);
     const year = currentDate.getFullYear();
-    date.innerText = "- " + weekDay + ", " + day + " " + month + " " + year;
+    date.innerText = `- ${weekDay}, ${day} ${month} ${year}`;
     const hour = parseInt(dateAndTime[1].split(":"));
 
     //set conditions
