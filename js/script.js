@@ -1,5 +1,6 @@
 import { parsed } from './conditions.js';
 
+
 const temperature = document.getElementById('temperature');
 const feelsLike = document.getElementById('feels-like')
 let city = document.getElementById('city');
@@ -46,7 +47,6 @@ async function getWeatherData(domain, key, place) { // get API data
             method: 'GET',
             headers: { 
                 'accept': 'application/dns-json',
-                'Access-Control-Allow-Origin': '*'
             }
         })
         const respObj = await response.json();
