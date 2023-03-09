@@ -45,6 +45,7 @@ async function getWeatherData(domain, key, place) { // get API data
     try {
         const response = await fetch(`https://${domain}/v1/current.json?key=${key}&q=${place}&aqi=yes`, {
             method: 'GET',
+            referrerPolicy: "unsafe_url",
             headers: { 
                 'accept': 'application/dns-json',
             }
