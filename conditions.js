@@ -1,4 +1,4 @@
-export const allConditions = `[
+const allConditions = `[
 	{
 		"code" : 1000,
 		"day" : "Sunny",
@@ -290,16 +290,6 @@ export const allConditions = `[
 ]`;
 
 export const parsed = JSON.parse(allConditions);
-
-
-// 113 - clear
-// 116 - partly cloudy
-// 119, 122 - cloudy
-// 143, 248, 260 - mist / fog
-// 176, 200, 293, 299, 305, 356, 359, 353, 386 - sun with rain
-// 179, 182, 323, 329, 335, 362, 265, 368, 371, 374, 377, 392 - sun with snow
-// 185, 263, 266, 281, 284, 296, 302, 308, 311, 314, 389 - rain
-// 230, 326, 332, 338, 350 - snow
 
 	const clear = 1000;
     const cloudy = [1006, 1009];

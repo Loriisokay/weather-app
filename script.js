@@ -1,4 +1,4 @@
-import {parsed} from '/conditions.js';
+import { parsed } from './conditions.js';
 
 const temperature = document.getElementById('temperature');
 const feelsLike = document.getElementById('feels-like')
@@ -188,7 +188,7 @@ function changeData(object) {
             background = 'snowing';
     }
 
-    document.body.style.backgroundImage = `url(./img/backgrounds/${dayTime}/${background}.jpg)`
+    document.body.style.backgroundImage = `url(./img/backgrounds/${dayTime}/${background}.jpg)`;
 }
 
 
